@@ -1,0 +1,281 @@
+@import url("https://fonts.googleapis.com/css?family=Assistant:400,700|Playfair+Display:900");
+:root {
+  --white: white;
+  --background-primary: white;
+  --text-color: #304D6D;
+  --nav-bg: #304D6D;
+  --nav-color: #A7CCED;
+  --hero-background: #A7CCED;
+  --button-bg-color: #304D6D;
+  --button-text-color: #A7CCED;
+}
+
+.dark {
+  --white: white;
+  --background-primary: #304D6D;
+  --text-color: #A7CCED;
+  --nav-bg: #304D6D;
+  --nav-color: #A7CCED;
+  --hero-background: #304D6D;
+  --button-bg-color: #A7CCED;
+  --button-text-color: #304D6D;
+}
+
+p {
+  font-size: 1.5rem;
+  line-height: 1.5;
+  margin: 3rem 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Playfair Display', serif";
+}
+
+h1 {
+  font-size: 36px;
+  margin-bottom: 1rem;
+}
+
+@media screen and (min-width: 640px) {
+  h1 {
+    font-size: 17px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  h1 {
+    font-size: 120px;
+  }
+}
+
+h2 {
+  font-size: 15px;
+  margin-bottom: 1rem;
+}
+
+@media screen and (min-width: 640px) {
+  h2 {
+    font-size: 17px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  h2 {
+    font-size: 80px;
+  }
+}
+
+h3 {
+  font-size: 15px;
+  margin-bottom: 1rem;
+}
+
+@media screen and (min-width: 640px) {
+  h3 {
+    font-size: 17px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  h3 {
+    font-size: 40px;
+  }
+}
+
+h4 {
+  font-size: 15px;
+  font-family: Arial, Helvetica, sans-serif;
+  margin-bottom: 3rem;
+  font-weight: normal;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+}
+
+@media screen and (min-width: 640px) {
+  h4 {
+    font-size: 17px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  h4 {
+    font-size: 24px;
+  }
+}
+
+h5 {
+  font-size: 15px;
+  margin-bottom: 1rem;
+}
+
+@media screen and (min-width: 640px) {
+  h5 {
+    font-size: 17px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  h5 {
+    font-size: 80px;
+  }
+}
+
+h6 {
+  font-size: 15px;
+  margin-bottom: 1rem;
+}
+
+@media screen and (min-width: 640px) {
+  h6 {
+    font-size: 17px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  h6 {
+    font-size: 80px;
+  }
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--background-primary);
+  color: var(--text-color);
+  font-size: 20px;
+  font-family: Arial, Helvetica, sans-serif;
+  transition: color 1s ease-in-out, background-color 0.4s ease-in-out;
+}
+
+a {
+  color: var(--text-color);
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+.flex {
+  display: flex;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.container {
+  width: 100%;
+  max-width: 100%;
+  padding: 0 2rem;
+  margin: 0 auto;
+}
+
+@media screen and (min-width: 1200px) {
+  .container {
+    max-width: 1200px;
+  }
+}
+
+.container.full {
+  min-width: 100%;
+}
+
+header {
+  position: fixed;
+  width: 100%;
+  min-width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--nav-bg);
+  color: var(--nav-color);
+  height: 4rem;
+}
+
+header div {
+  width: 100%;
+}
+
+header .navigation ul {
+  height: 100%;
+  list-style: none;
+}
+
+header .navigation ul li {
+  display: inline-block;
+  padding: 0 1rem;
+}
+
+header a {
+  color: var(--nav-color);
+}
+
+header #dark-mode-toggle {
+  transform: scale(1);
+}
+
+header #dark-mode-toggle:hover {
+  transform: scale(200%);
+}
+
+.hero-section {
+  background-color: var(--hero-background);
+  padding: 2rem 0;
+}
+
+@media screen and (min-width: 1200px) {
+  .hero-section {
+    padding: 16rem 0 8rem;
+  }
+}
+
+.main-section {
+  padding: 2rem 0;
+}
+
+@media screen and (min-width: 1200px) {
+  .main-section {
+    padding: 8rem 0 8rem;
+  }
+}
+
+button {
+  padding: 1rem 2rem;
+  border: none;
+  font-size: 1.5rem;
+  background-color: var(--button-bg-color);
+  border: 4px solid var(--button-bg-color);
+  color: var(--button-text-color);
+  border-radius: 0.4rem;
+  font-weight: normal;
+  margin-right: 1.5rem;
+  transition: all 0.4s ease-in-out;
+}
+
+button:hover {
+  color: var(--button-bg-color);
+  background-color: var(--button-text-color);
+}
+
+button.outline {
+  background-color: transparent;
+  color: var(--button-bg-color);
+}
+
+button.outline:hover {
+  background-color: var(--button-bg-color);
+  color: var(--button-text-color);
+}
+/*# sourceMappingURL=main.css.map */

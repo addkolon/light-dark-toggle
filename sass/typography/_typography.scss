@@ -1,0 +1,94 @@
+@import url("https://fonts.googleapis.com/css?family=Assistant:400,700|Playfair+Display:900");
+
+
+p {
+    font-size: 1.5rem;
+    line-height: 1.5;
+    margin: 3rem 0;
+}
+
+$heading-font: "Playfair Display', serif";
+
+$h1-font-sizes: (null : 36px,
+    640px : 17px,
+    1200px: 120px);
+
+$h2-font-sizes: (null : 15px,
+    640px : 17px,
+    1200px: 80px);
+
+$h3-font-sizes: (null : 15px,
+    640px : 17px,
+    1200px: 40px);
+
+$h4-font-sizes: (null : 15px,
+    640px : 17px,
+    1200px: 24px);
+
+$h5-font-sizes: (null : 15px,
+    640px : 17px,
+    1200px: 80px);
+
+$h6-font-sizes: (null : 15px,
+    640px : 17px,
+    1200px: 80px);
+
+
+@mixin font-size($fs-map) {
+
+    @each $fs-breakpoint,
+    $fs-font-size in $fs-map {
+        @if $fs-breakpoint==null {
+            font-size: $fs-font-size;
+        }
+
+        @else {
+            @media screen and (min-width: $fs-breakpoint) {
+                font-size: $fs-font-size;
+            }
+        }
+    }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: $heading-font;
+}
+
+h1 {
+    @include font-size ($h1-font-sizes);
+    margin-bottom: 1rem;
+}
+
+h2 {
+    @include font-size ($h2-font-sizes);
+    margin-bottom: 1rem;
+}
+
+h3 {
+    @include font-size ($h3-font-sizes);
+    margin-bottom: 1rem;
+}
+
+h4 {
+    @include font-size ($h4-font-sizes);
+    font-family: Arial, Helvetica, sans-serif;
+    margin-bottom: 3rem;
+    font-weight: normal;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+}
+
+h5 {
+    @include font-size ($h5-font-sizes);
+    margin-bottom: 1rem;
+}
+
+h6 {
+    @include font-size ($h6-font-sizes);
+    margin-bottom: 1rem;
+}
