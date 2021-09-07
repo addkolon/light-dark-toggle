@@ -2,9 +2,13 @@
 
 
 p {
-    font-size: 1.5rem;
+    font-size: 1rem;
     line-height: 1.5;
     margin: 3rem 0;
+
+    @include mq(large) {
+        font-size: 1.5rem;
+    }
 }
 
 $heading-font: "Playfair Display', serif";
