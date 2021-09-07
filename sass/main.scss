@@ -15,6 +15,7 @@ $color-primary: #63ADF2;
     --hero-background: #{$color-light};
     --button-bg-color: #{$color-dark};
     --button-text-color: #{$color-light};
+    --footer-border: #{$white};
 }
 
 .dark {
@@ -26,6 +27,7 @@ $color-primary: #63ADF2;
     --hero-background: #{$color-dark};
     --button-bg-color: #{$color-light};
     --button-text-color: #{$color-dark};
+    --footer-border: #{$color-light};
 }
 
 @import "mixins/mixins";
@@ -250,5 +252,19 @@ button {
             background-color: var(--button-bg-color);
             color: var(--button-text-color);
         }
+    }
+}
+
+footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--nav-bg);
+    color: var(--nav-color);
+    height: 4rem;
+    border-top: 1px solid var(--footer-border);
+
+    p {
+        margin: 0%;
     }
 }

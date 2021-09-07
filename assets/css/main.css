@@ -8,6 +8,7 @@
   --hero-background: #A7CCED;
   --button-bg-color: #304D6D;
   --button-text-color: #A7CCED;
+  --footer-border: white;
 }
 
 .dark {
@@ -19,6 +20,7 @@
   --hero-background: #304D6D;
   --button-bg-color: #A7CCED;
   --button-text-color: #304D6D;
+  --footer-border: #A7CCED;
 }
 
 p {
@@ -367,5 +369,19 @@ button.outline {
 button.outline:hover {
   background-color: var(--button-bg-color);
   color: var(--button-text-color);
+}
+
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--nav-bg);
+  color: var(--nav-color);
+  height: 4rem;
+  border-top: 1px solid var(--footer-border);
+}
+
+footer p {
+  margin: 0%;
 }
 /*# sourceMappingURL=main.css.map */
